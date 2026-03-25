@@ -106,7 +106,7 @@ export default function Contact() {
               </div>
 
               <div className="fade-up relative">
-                <textarea name="message" rows="1" required className="w-full bg-transparent border-b-2 border-[#121212]/20 pb-4 text-xl md:text-2xl text-[#121212] focus:outline-none focus:border-[#121212] transition-colors peer placeholder-transparent font-medium resize-none overflow-hidden" placeholder="Message" onInput={(e) => { e.target.style.height = 'auto'; e.target.style.height = e.target.scrollHeight + 'px'; }}></textarea>
+                <textarea name="message" rows="1" required className="w-full bg-transparent border-b-2 border-[#121212]/20 pb-4 text-xl md:text-2xl text-[#121212] focus:outline-none focus:border-[#121212] transition-colors peer placeholder-transparent font-medium resize-none overflow-hidden" placeholder="Message" onInput={(e: any) => { e.target.style.height = 'auto'; e.target.style.height = e.target.scrollHeight + 'px'; }}></textarea>
                 <label className="absolute left-0 top-0 text-sm font-bold text-[#121212]/50 uppercase transition-all duration-300 peer-focus:-top-6 peer-focus:text-[10px] peer-focus:text-[#121212] peer-[:not(:placeholder-shown)]:-top-6 peer-[:not(:placeholder-shown)]:text-[10px] pointer-events-none">
                   Tell us about your project
                 </label>

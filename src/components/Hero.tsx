@@ -65,7 +65,7 @@ export default function Hero() {
     return () => ctx.revert();
   }, []);
 
-  const handleMouseMove = (e) => {
+ const handleMouseMove = (e: any) => {
     if (!textWrapperRef.current) return;
     const { clientX, clientY } = e;
     

@@ -81,8 +81,8 @@ const projects = [
 ];
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null); 
-  const containerRef = useRef(null);
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const containerRef = useRef<any>(null);
 
   // 🪄 THE SITETRIP COLOR BLENDING ENGINE (Light/Premium Theme)
   useEffect(() => {
@@ -138,7 +138,7 @@ export default function Projects() {
 
         {/* --- THE SITETRIP MASSIVE CARDS LAYOUT --- */}
         <div className="flex flex-col w-full gap-32 md:gap-48">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div 
               key={project.id}
               className="project-card w-full flex flex-col items-center group cursor-pointer"
@@ -248,7 +248,7 @@ export default function Projects() {
                       Technologies Used
                     </h3>
                     <div className="flex flex-wrap gap-3">
-                      {selectedProject.stack.map((item, i) => (
+                      {selectedProject?.stack.map((item: any, i: any) => (
                         <span key={i} className="px-4 py-2 bg-white/40 backdrop-blur-md border border-[#121212]/10 rounded-full text-[10px] font-mono uppercase tracking-wider text-[#121212]">
                           {item}
                         </span>
